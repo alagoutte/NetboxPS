@@ -13,11 +13,11 @@
 
 
 function Get-NetboxIPAMVLAN {
-    [CmdletBinding()]
+    [CmdletBinding(DefaultParameterSetName = 'Query')]
     param
     (
         [Parameter(ParameterSetName = 'Query',
-                   Position = 0)]
+            Position = 0)]
         [ValidateRange(1, 4096)]
         [uint16]$VID,
 
