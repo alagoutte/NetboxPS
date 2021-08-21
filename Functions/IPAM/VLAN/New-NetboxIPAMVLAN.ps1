@@ -1,4 +1,17 @@
-﻿function New-NetboxIPAMVLAN {
+﻿<#
+    .NOTES
+    ===========================================================================
+     Created with:  SAPIEN Technologies, Inc., PowerShell Studio 2020 v5.7.172
+     Created on:    3/16/2020 16:34
+     Created by:    Claussen
+     Organization:  NEOnet
+     Filename:      Get-NetboxIPAMVLAN.ps1
+    ===========================================================================
+    .DESCRIPTION
+        A description of the file.
+#>
+
+function New-NetboxIPAMVLAN {
     <#
     .SYNOPSIS
         Create a new VLAN
