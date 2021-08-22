@@ -63,7 +63,7 @@ function New-NetboxIPAMVLAN {
 
         [object]$Status = 'Active',
 
-        [uint16]$Tenant,
+        [uint64]$Tenant,
 
         [object]$Role,
 
