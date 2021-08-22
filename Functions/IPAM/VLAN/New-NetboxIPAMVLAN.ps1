@@ -31,6 +31,9 @@ function New-NetboxIPAMVLAN {
     .PARAMETER Tenant
         Tenant ID
 
+    .PARAMETER Site
+        Site ID
+
     .PARAMETER Role
         A role indicates the function of a prefix or VLAN. For example, you might define Data, Voice, and Security roles
 
@@ -64,6 +67,9 @@ function New-NetboxIPAMVLAN {
         [object]$Status = 'Active',
 
         [uint64]$Tenant,
+
+
+        [uint64]$Site,
 
         [object]$Role,
 
