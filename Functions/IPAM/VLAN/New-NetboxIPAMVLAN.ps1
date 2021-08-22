@@ -86,7 +86,7 @@ function New-NetboxIPAMVLAN {
 
     $URI = BuildNewURI -Segments $URIComponents.Segments
 
-    if ($PSCmdlet.ShouldProcess($nae, 'Create new Vlan $($vid)')) {
+    if ($PSCmdlet.ShouldProcess($name, 'Create new Vlan $($vid)')) {
         InvokeNetboxRequest -URI $URI -Method POST -Body $URIComponents.Parameters -Raw:$Raw
     }
 }
