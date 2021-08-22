@@ -32,19 +32,16 @@ function New-NetboxIPAMVLAN {
         Tenant ID
 
     .PARAMETER Role
-        Role such as anycast, loopback, etc... Defaults to nothing
+        A role indicates the function of a prefix or VLAN. For example, you might define Data, Voice, and Security roles
 
     .PARAMETER Description
-        Description of IP address
+        Description of Vlan
 
     .PARAMETER Custom_Fields
         Custom field hash table. Will be validated by the API service
 
     .PARAMETER Raw
         Return raw results from API service
-
-    .PARAMETER Address
-        IP address in CIDR notation: 192.168.1.1/24
 
     .EXAMPLE
         PS C:\> Create-NetboxIPAMAddress
