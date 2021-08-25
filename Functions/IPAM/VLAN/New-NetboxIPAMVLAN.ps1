@@ -47,7 +47,9 @@ function New-NetboxIPAMVLAN {
         Return raw results from API service
 
     .EXAMPLE
-        PS C:\> Create-NetboxIPAMAddress
+        PS C:\> New-NetboxIPAMVlan -vid 23 -name "My NetboxPS VLAN"
+
+        Add new Vlan named "My NetboxPS VLAN" with id 23
 
     .NOTES
         Additional information about the function.
