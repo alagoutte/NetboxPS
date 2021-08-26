@@ -89,7 +89,6 @@ function New-NetboxIPAMVLAN {
 
         [uint64]$Tenant,
 
-
         [uint64]$Site,
 
         [object]$Role,
