@@ -51,6 +51,25 @@ function New-NetboxIPAMVLAN {
 
         Add new Vlan named "My NetboxPS VLAN" with id 23
 
+    .EXAMPLE
+        PS C:\> New-NetboxIPAMVlan -vid 23 -name "My NetboxPS VLAN" -description "Add with NetboxPS"
+
+        Add new Vlan named "My NetboxPS VLAN" with id 23 with a description
+
+    .EXAMPLE
+        PS C:\> New-NetboxIPAMVlan -vid 23 -name "My NetboxPS VLAN" -site (Get-NetboxDCIMsite -name "My NetboxPS Site").id
+
+        Add new Vlan named "My NetboxPS VLAN" with id 23 on site named "My Netbox PS Site"
+
+    .EXAMPLE
+        PS C:\> New-NetboxIPAMVlan -vid 23 -name "My NetboxPS VLAN" -tenant 2
+
+        Add new Vlan named "My NetboxPS VLAN" with id 23 on tenant 2
+
+    .EXAMPLE
+        PS C:\> New-NetboxIPAMVlan -vid 23 -name "My NetboxPS VLAN" -role (Get-NetboxIPAMRole -anme "My NetboxPS IPAM Role").id
+
+        Add new Vlan named "My NetboxPS VLAN" with id 23 with role "My NetboxPS IPAM Role"
     .NOTES
         Additional information about the function.
 #>
