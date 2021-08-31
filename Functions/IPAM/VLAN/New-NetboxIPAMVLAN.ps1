@@ -26,7 +26,7 @@ function New-NetboxIPAMVLAN {
         The name of the VLAN.
 
     .PARAMETER Status
-        Status of the VLAN. Defaults to Active
+        Status of the VLAN. Defaults to Active (Can be also deprecated or reserved)
 
     .PARAMETER Tenant
         Tenant ID
@@ -70,6 +70,12 @@ function New-NetboxIPAMVLAN {
         PS C:\> New-NetboxIPAMVlan -vid 23 -name "My NetboxPS VLAN" -role (Get-NetboxIPAMRole -name "My NetboxPS IPAM Role").id
 
         Add new Vlan named "My NetboxPS VLAN" with id 23 with role "My NetboxPS IPAM Role"
+
+    .EXAMPLE
+        PS C:\> New-NetboxIPAMVlan -vid 23 -name "My NetboxPS VLAN" -status reserved
+
+        Add new Vlan named "My NetboxPS VLAN" with id 23 with reserved status
+
     .NOTES
         Additional information about the function.
 #>
