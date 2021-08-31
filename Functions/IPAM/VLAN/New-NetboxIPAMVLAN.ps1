@@ -80,9 +80,11 @@ function New-NetboxIPAMVLAN {
     param
     (
         [Parameter(Mandatory = $true)]
+        [ValidateRange (1, 4094)]
         [uint16]$VID,
 
         [Parameter(Mandatory = $true)]
+        [ValidateLength(1, 64)]
         [string]$Name,
 
         [object]$Status = 'Active',
@@ -93,6 +95,7 @@ function New-NetboxIPAMVLAN {
 
         [uint64]$Role,
 
+        [ValidateLength(0, 200)]
         [string]$Description,
 
         [hashtable]$Custom_Fields,
