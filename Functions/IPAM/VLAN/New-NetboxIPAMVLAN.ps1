@@ -67,7 +67,7 @@ function New-NetboxIPAMVLAN {
         Add new Vlan named "My NetboxPS VLAN" with id 23 on tenant 2
 
     .EXAMPLE
-        PS C:\> New-NetboxIPAMVlan -vid 23 -name "My NetboxPS VLAN" -role (Get-NetboxIPAMRole -anme "My NetboxPS IPAM Role").id
+        PS C:\> New-NetboxIPAMVlan -vid 23 -name "My NetboxPS VLAN" -role (Get-NetboxIPAMRole -name "My NetboxPS IPAM Role").id
 
         Add new Vlan named "My NetboxPS VLAN" with id 23 with role "My NetboxPS IPAM Role"
     .NOTES
