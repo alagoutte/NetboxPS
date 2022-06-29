@@ -19,4 +19,4 @@ jobs:
               - 8000:8080
         EOF
         docker-compose pull
-        docker-compose up
+        docker-compose up -d
