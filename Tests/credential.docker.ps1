@@ -8,6 +8,7 @@
 
 $script:hostname = "127.0.0.1"
 $script:token = "0123456789abcdef0123456789abcdef01234567"
+$script:port = "8080"
 
 #Uncomment if you want to use another port to access to ClearPass
 #script:pester_site1 = "pester_site1"

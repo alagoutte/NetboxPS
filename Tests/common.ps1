@@ -5,6 +5,7 @@
 #
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSAvoidUsingConvertToSecureStringWithPlainText", "")]
 Param()
+$port = "443"
 . ../credential.ps1
 
 $script:pester_site1 = "pester_site1"
@@ -14,6 +15,7 @@ $script:invokeParams = @{
     hostname             = $hostname;
     Credential           = $Credential;
     SkipCertificateCheck = $true;
+    Port                 = $port
 }
 
 #TODO: Add check if no ipaddress/token info...
