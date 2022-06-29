@@ -25,10 +25,6 @@ jobs:
       shell: pwsh
       run: |
         cd Tests
-        tee credential.ps1 <<EOF
-        $script:hostname = "127.0.0.1"
-        $script:token = "0123456789abcdef0123456789abcdef01234567"
-        EOF
-        cd integration
+        cp credential.docker.ps1 credential.ps1
         Invoke-Pester *
 
