@@ -5,6 +5,7 @@
 #
 [Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSAvoidUsingConvertToSecureStringWithPlainText", "")]
 Param()
+. ../credential.ps1
 
 $script:pester_site1 = "pester_site1"
 
@@ -15,5 +16,4 @@ $script:invokeParams = @{
     SkipCertificateCheck = $true;
 }
 
-. ../credential.ps1
 #TODO: Add check if no ipaddress/token info...
