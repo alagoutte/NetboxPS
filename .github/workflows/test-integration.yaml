@@ -23,7 +23,7 @@ jobs:
         docker-compose ps
     - name: Launch Pester
       run: |
-        cd .\Tests\
+        cd ..\Tests\
         tee credential.ps1 <<EOF
         $script:hostname = "127.0.0.1"
         $script:token = "0123456789abcdef0123456789abcdef01234567"
