@@ -16,7 +16,7 @@ $script:invokeParams = @{
     Credential           = $Credential;
     SkipCertificateCheck = $true;
     Port                 = $port;
-    $scheme              = "http";
+    Scheme               = "http";
 }
 
 #TODO: Add check if no ipaddress/token info...
