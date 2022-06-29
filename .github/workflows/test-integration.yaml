@@ -24,7 +24,6 @@ jobs:
     - name: Launch Pester
       shell: pwsh
       run: |
-        cd Netbox
         Import-Module ./NetboxPS/NetboxPS.psd1
         cd Tests
         cp credential.docker.ps1 credential.ps1
