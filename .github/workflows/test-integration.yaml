@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Install Netbox
+    - name: Install Netbox & Launch (docker)
       run: |
         git clone -b release https://github.com/netbox-community/netbox-docker.git
         cd netbox-docker
@@ -21,3 +21,12 @@ jobs:
         docker-compose pull
         docker-compose up -d
         docker-compose ps
+    - name: Launch Pester
+      run: |
+        cd .\Tests\
+        tee credential.ps1 <<EOF
+        $script:hostname = "127.0.0.1"
+        $script:token = "0123456789abcdef0123456789abcdef01234567"
+        cd integration
+        Invoke-Pester *
+
