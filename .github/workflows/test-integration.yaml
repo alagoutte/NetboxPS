@@ -25,6 +25,7 @@ jobs:
     - name: Launch Pester
       shell: pwsh
       run: |
+        ./deploy.ps1 -SkipVersion
         Import-Module ./NetboxPS/NetboxPS.psd1
         cd Tests
         cp credential.docker.ps1 credential.ps1
